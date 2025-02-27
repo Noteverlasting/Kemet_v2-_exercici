@@ -152,7 +152,7 @@ section > div {
 
 footer div {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     padding: 0.5rem 0.75rem 0.5rem 0;
     align-items: start;
   
