@@ -1,0 +1,56 @@
+<!-- 
+
+Fonts tipogràfiques: Amita i Roboto
+
+Descripció cat:
+La millor oferta de viatges per a visitar Egipte! Ens encarreguem de tot, amb la millor oferta d'hotels i excursions.
+
+Descripcion cas:
+¡La mejor agencia de viajes para visitar Egipto! Nos encargamos de todo, con la mejor oferta de hoteles y excursiones.
+
+Abu Simbel cat:
+Quan arribes a Abu Simbel i et quedes dret mirant els colossos de roca de la façana principal ets fas petit, petit. L'experiència s'ha de viure. La mirada se'n va més enllà de 3.200 anys enrere.
+
+Abu Simbel cast:
+Cuando llegas a Abu Simbel y te quedas de pie mirando los colosos de roca de la fachada principal eres pequeño, pequeño. La experiencia debe vivirse. La mirada va más allá de 3.200 años atrás.
+
+Karnak cat:
+El complex de Karnak és el conjunt del culte religiós conegut més antic del món. Un museu enorme a l'aire lliure mostra importants restes de la cultura de l'antic Egipte.
+
+Karnak cast:
+El complejo de Karnak es el conjunto del culto religioso conocido más antiguo del mundo. Un enorme museo al aire libre muestra importantes restos de la cultura del antiguo Egipto.
+   
+
+Oasis cast
+El Oasis de Siwa, un rincón mágico en el corazón del desierto egipcio, emerge como un espejismo en medio de la aridez.
+
+
+
+
+
+
+Alojamientos premium
+Seleccionaremos los mejores hoteles y cruceros para que cada noche de tu viaje sea confortable y especial.
+
+Transporte privado
+Todos los desplazamientos de nuestros viajes se realizan en vehículo privado con chófer, con total confort y flexibilidad.
+
+Destinos a tu gusto
+Nuestros circuitos admiten las variantes que quieras: playas tranquilas, oasis poco transitados, monumentos menos conocidos…
+
+Gastronomía exquisita
+Los restaurantes con los que trabajamos son siempre de la máxima calidad, para que la cocina sea un aliciente más
+
+Acompañamiento total
+Durante el viaje, asignaremos personal de acompañamiento para que os sintáis arropados en todo momento, sin renunciar al tiempo libre.
+
+Ayuda con los papeleos
+Desde el momento de la llegada, te ayudaremos con los trámites que sean necesarios, empezando con el visado en el aeropuerto.
+
+
+&copy Kemet, especialistes en Egipte
+
+ -->
+
+
+

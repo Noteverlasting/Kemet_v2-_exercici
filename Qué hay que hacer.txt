@@ -1,0 +1,6 @@
+Intenta reproducir la página web según el modelo.
+Puedes crear otra más como continuación para la agencia de viajes.
+
+Súbelo a GitHub y comparte el enlace.
+
+También debes subirlo a la plataforma (Moodle). Recuerda que hay una fecha límite.

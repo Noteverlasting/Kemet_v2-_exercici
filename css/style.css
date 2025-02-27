@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto/Roboto-VariableFont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Amita';
+    src: url('../fonts/Amita/Amita-Regular.woff2') format('woff2'),
+        url('../fonts/Amita/Amita-Regular.woff') format('woff'),
+        url('../fonts/Amita/Amita-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    list-style: none;
+  }
+
+:root {
+    --width_xl: 800px;
+    --main_color: rgb(234, 186, 112);
+    --secondary_color: rgb(100,200,250);
+}
+
+/* CLASES */
+
+.desktop_xl {
+    margin: 0 auto;
+    max-width: var(--width_xl);
+}
+  
+.fondonav {
+    background-color: var(--main_color);
+  }
+
+.fondoocre {
+    background-image:linear-gradient( rgba( 234, 186, 112, 0.2), rgba(234, 186, 112, 0.3)), url('../img/background.png');
+
+    h2, h3 {
+        color: var(--secondary_color);
+    }
+
+    >div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+}
+}
+
+.icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+        img{
+        width: 50px;
+        height: 50px;}
+}
+
+.fotoequip {
+    align-items: center;
+    img{
+    border-radius: 200px;}
+}
+
+/* ETIQUETAS */
+
+h1 {
+    position: absolute;
+    left: 10vw;
+    top: 6vw;
+    width: 15vw;
+  }
+
+h2 {
+    padding-top: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h2, h3 {
+    font-family: "Amita";
+    text-align: center;
+}
+
+p {
+    font-size: .80rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+nav {
+    height: 35px;
+    ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    a{
+    text-decoration: none;
+    color: black;
+    &:hover {
+        text-decoration: overline underline;
+        color:darkred;
+        font-weight: 600;
+    }
+}
+}
+}
+
+section {
+    background-image: url('../img/background.png');
+    padding: 1rem;
+}
+
+
+section > div {    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
