@@ -208,7 +208,11 @@ footer > div {
     }
   }
 
-
+footer >p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
 /* MEDIA QUERY */
 
 @media screen and (max-width: 600px) {
@@ -239,7 +243,10 @@ footer > div {
         aspect-ratio:unset;
     }
 
-    
+    hr {
+        line-height: 1px;
+    }
+
     h2, h3 {
         padding: 1rem 0 0 0;
     }
