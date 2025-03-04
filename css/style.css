@@ -33,14 +33,15 @@
     --width_mb: 400px;
     --main_color: rgb(234, 186, 112);
     --secondary_color: rgb(100,200,250);
+    --background-ocre: linear-gradient( rgba( 234, 186, 112, 0.2), rgba(234, 186, 112, 0.3));
 }
 
 /* IDS */
 
 #servicios {
-    background-image:linear-gradient( rgba( 234, 186, 112, 0.2), rgba(234, 186, 112, 0.3));
+    background: var(--background-ocre);
 
-    h2, h3 {
+    h2, h3 { 
         color: var(--secondary_color);
     }
 
@@ -52,6 +53,23 @@
     align-items: center;
     max-width: 800px;
     }
+}
+
+#abusimbel{
+    background: var(--background-ocre);
+    align-items: center;
+    text-align: center;
+
+
+    h2{
+        font-size: 2rem;
+    }
+
+    >p {
+        font-size: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    
 }
 
 #footerMBL {
