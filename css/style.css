@@ -19,7 +19,7 @@
     font-display: swap;
 }
 
-
+/* EDITA LOS FORMATOS DE TODO EL DOCUMENTO */
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +28,7 @@
     list-style: none;
   }
 
+/* CREA UNA "GUIA" DE DISEÑO PARA USAR SIEMPRE LOS MISMOS ATRIBUTOS*/
 :root {
     --width_xl: 800px;
     --width_mb: 400px;
@@ -36,8 +37,11 @@
     --background-ocre: linear-gradient( rgba( 234, 186, 112, 0.2), rgba(234, 186, 112, 0.3));
 }
 
-/* IDS */
 
+
+/* IDS */
+/* Dentro de #servicios, variamos fondo, color de los h2 y h3, 
+y disposición dentro de los div hijos directos a 3 columnas y 2 filas*/
 #servicios {
     background: var(--background-ocre);
 
@@ -51,48 +55,65 @@
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
     align-items: center;
-    max-width: 800px;
+    max-width: var(--width_xl);
     }
 }
-
+/* Dentro de #abusimbel, variamos fondo, y le damos un display Flex en columnas.
+Alineamos los items vertical y horizontalmente, y le damos al texto un centrado*/
 #abusimbel{
     background: var(--background-ocre);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
 
+    /* Las imagenes que estén dentro de #abusimbel, tienen una anchura del 100%*/
+    img {
+        max-width: 100%;
+    }
 
+    /* Los h2 dentro de #abusimbel tendrán un tamaño de 2rem*/
     h2{
         font-size: 2rem;
     }
-
+    /* Los p hijos directos de #abusimbel tendrán un tamaño de 1rem y un padding de 1.5rem por debajo */
     >p {
         font-size: 1rem;
         padding-bottom: 1.5rem;
     }
-    
 }
 
+/*Le indicamos a la clase #footerMBL (diseñada para moviles) que no se muestre*/
 #footerMBL {
     display: none;
 }
 
 /* CLASES */
 
+/*La clase deja sin márgenes arriba y abajo y hace automáticos los márgenes izq. y der.
+el max-width está fijado en 800px (aplicando la variable)*/
 .desktop_xl {
     margin: 0 auto;
     max-width: var(--width_xl);
 }
-  
+
+/*La clase le otorga un fondo de color definido por la variable*/
 .fondonav {
     background-color: var(--main_color);
   }
 
+/*Los items dentro de la clase estarán centrados, y las imágenes dentro de esta clase tendrán un
+redondeamiento del 50%*/
 .fotoequip {
     align-items: center;
     img{
     border-radius: 50%;}
 }
-
+/*Esta clase se aplica a los divs dentro de la seccion servicios (los cuadrados blancos)
+y les ordena estar en columna, centrados, tener un fondo blanco, un padding de 30px, que mantengan el aspecto 
+cuadrado y su medida mínima sea de 200px para que no se deformen demasiado.
+También le aplica a las imágenes dentro de esta clase que tengan una medida máx de 50x50px*/
 .icono {
     display: flex;
     flex-direction: column;
@@ -102,11 +123,13 @@
     padding: 30px;
     aspect-ratio: 1 / 1;
     text-align: center;
+    min-width: 200px;
         img{
         max-width: 50px;
         max-height: 50px;}
 }
-
+/*Esta clase es para quitarle las decoraciones al texto de las <a> les cambia el color a negro, y les indica
+que cuando tengan la posición hover se vuelvan más gruesas, cambien su color a rojo y les aparezca un subrayado y superlineado*/
 .link_SE {
     a{
         text-decoration: none;
@@ -119,6 +142,51 @@
     }
 }
 
+/*Esta clase está creada para dar otro formato a una parte. Ordena sus items en flex-row (fila) alineandolos y dándoles una altura,
+también le indica a los div que sean hijo directo que usen flex:1, lo que hace que se adapten equitativamente de forma flexible.
+Por último le indicamos a las img que estén dentro de esta clase que se puedan expandir hasta su 100%*/
+.textovar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100% ;
+        gap: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        >div {
+            flex:1; /*Esta declaración aporta flex-grow:1, flex-shrink:1, y flex-basis:0%. 
+                    Esto permite que el elemento crezca y se encoja para llenar el espacio disponible en el contenedor flex, distribuyendo el espacio de manera equitativa entre los elementos flexibles.*/
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            width: auto;
+        }
+}
+
+/*Esta clase le da un gradiente nuevo y está marcada como importante para que no se la salte el script
+Los divs que sean hijos directos estarán alineados en columna y las imágenes que contengan estos divs se muestran hasta su 100%*/
+.abu-final {
+    background-image: linear-gradient( rgba(234, 186, 112, 0.3), rgba(210, 136, 25, 0.537)) !important;
+    
+    >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    img {
+        max-width: 100%;}
+    }
+}
+
+/*Esta clase indica a los elementos que se alineen hacia el final y se situen a la izquierda, igual que al texto*/
 .footercontacte{
     display: flex;
     justify-content: right;
@@ -128,42 +196,44 @@
 
 /* ETIQUETAS */
 
+/*Aplica una imagen de fondo y le ordena que se expanda hasta cubrir la pantalla*/
 body {
     background-image: url('../img/background.png');
     background-size: cover;
 }
 
+/*Posiciona de manera absoluta (fija) el contenido del h1 y le aporta medidas para colocarse, así como anchura*/
 h1 {
     position: absolute;
     left: 10vw;
     top: 6vw;
     width: 15vw;
 }
-
+/*Proporciona un padding por arriba a los h2*/
 h2 {
     padding-top: 1.5rem;
 }
-
+/*Proporciona un tamaño de letra y una altura de línea a los h3*/
 h3{
     font-size: 1.5rem;
     line-height: 1.2;
 }
-
+/*Les indica a las h2 y h3 que tengan una fuente y se alineen centradas*/
 h2, h3 {
     font-family: "Amita";
     text-align: center;
 }
-
+/*Le indica a las <p> que tengan un tamaño concreto y un padding en su parte superior*/
 p {
-    font-size: .80rem;
+    font-size: .8rem;
     padding-top: 1.5rem;
 }
-
+/*Le indica a las imágenes que se muestren como máximo en su 100% y no tengan un display inline*/
 img {
     max-width: 100%;
     display: block;
 }
-
+/*Le otorga al nav una posición sticky (pegada) y le da unas coordenadas, así como un display y un formato a las ul que pueda tener dentro*/
 nav {
     position: sticky;
     top: 0px;
@@ -176,62 +246,83 @@ nav {
 }
 }
 
+/*Aporta un padding por todos los lados a las section*/
 section {
     padding: 1rem;
 }
 
-
+/*Les ordena a los divs hijos directos de las section que se muestren en grid de 2 columnas con gap y padding*/
 section > div {    
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding-top: 1rem;
 }
+/*Le da formato a casi todo el footer*/
+/*Los <p> hijos directos se alinean al centro y usan padding superior e inferior*/
+/*Los div hijos directos se muestran en grid de 4 columnas con un gap y un padding*/
+/*Los h2 dentro de estos div usan la fuente Roboto, se alinean a la izquierda y usan un padding*/
+/*Los div dentro de estos div tienen flex column*/
+/*Los li dentro de estos div tienen un tamaño de letra y un padding, y las imagenes dentro de ellos tienen un width en vw*/
+/*Los div dentro de estos div tienen flex row y las imagenes dentro de ellos (iconos de RRSS) tienen un max-width y padding*/
 
-footer > div {
+footer {
+
+    >p {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    >div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 3fr;
-    padding: 1rem 0rem 0.5rem 0rem;
+    padding: 1rem 1rem 0.5rem 1rem;
     column-gap: 2rem;
-    align-items: start;
+    
+        h2 {
+          font-family: "Roboto";
+          font-size: small;
+          text-align: left;
+          padding: .5rem 0 .5rem 0;
+        }
   
-    h2 {
-      font-family: "Roboto";
-      font-size: small;
-      text-align: left;
-      padding: .5rem 0 .5rem 0;
-    }
-  
-    div {
-      display: flex;
-      flex-direction: column;
-  
-      li {
-        font-size: 0.8rem;
-        padding: .25rem 0 .25rem 0;
-      }
-      >img {
-        width: 10vw;
-      }
-  
-      div {
+        div {
         display: flex;
-        flex-direction: row;
-        img {
-            max-width: 50px;
-            padding-left: 1rem;
-          }
-      }
+        flex-direction: column;
+  
+            li {
+            font-size: 0.8rem;
+            padding: .25rem 0 .25rem 0;
+            }
+            >img {
+            width: 10vw;
+            }
+  
+            div {
+            display: flex;
+            flex-direction: row;
+                img {
+                max-width: 50px;
+                padding-left: 1rem;
+                }
+            }
       
+        }
     }
-  }
-
-footer >p {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 1rem 0 1rem 0;
 }
+
 /* MEDIA QUERY */
+
+/*Si la pantalla es menor a 600px, se aplican los siguientes cambios. Anoto los importantes:*/
+/*En el id servicios se cambia el grid de los divs hijos directos, pasando de 3 columnas y 2 filas 
+a 2 columnas y 3 filas, cambiando tamnbién su max-width por una variable de 600px*/
+/*Se cambia el tamaño de letra de los h3 que estén dentro del id servicios*/
+/*La clase icono se modifica para que tenga un display flex en columna, esten alineados,tengan un padding,
+una altura,un overflow y un aspect-ratio*/
+/*Se cambia el max-width de las imágenes que estén dentro de la clase fotoequip*/
+/*Se le ordena que el footerDSK se oculte, y se muestre el nuevo footerMBL adaptado*/
+/*Se crea un menu desplegable usando clases y listas para mostrar el footer de un modo más compacto*/
+
 
 @media screen and (max-width: 600px) {
     
@@ -251,14 +342,19 @@ footer >p {
             font-size: 1rem;
         }
     }
-
-    .icono{
+    .icono {
         display: flex;
+        flex-direction: column;
         padding: 20px;
-        height: 100%;
-        max-height: 400px;
-        overflow: hidden;
-        aspect-ratio:unset;
+        height: auto;
+        max-height: none;
+        text-align: center;
+        min-width: 150px;
+        aspect-ratio: 1/1.5;
+        img {
+            max-width: 100%;
+            
+        }
     }
 
     hr {
